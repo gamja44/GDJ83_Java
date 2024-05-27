@@ -17,17 +17,20 @@ public class Study8 {
 			System.out.println("1.단발 2.점사");
 			int select =sc.nextInt();
 			System.out.println(select);
+			int count=0; //int count = 10;
+			String sound="";//String sound = "타다당";
 			if(select==1) {
-				for(int j=0;j<30;j++) {
-				System.out.println(j+1+"번탕 ");
-				}
-			}else {
-				for(int j=0;j<10;j++) {
-				System.out.println(j+1+"번탕 ");
-				}
+				count=30;
+				sound="탕";
+			}else {			//count가 10;이들어갔다면 else사용하지않아도된다
+				count=10;
+				sound="타다당";
 			}
-			
-		}
+			//for문을 한번이용해서 사용
+			//30번에서 10번으로 변경 -> 변수 사용
+			for(int j=0;j<count;j++) {
+				System.out.println(sound);
+			}
 		
 		
 //		int s = sc.nextInt();
@@ -44,5 +47,6 @@ public class Study8 {
 //			
 //			}
 //		}
+		}
 	}
 }
