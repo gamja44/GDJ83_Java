@@ -88,6 +88,14 @@ public class S2_arr {
 
 				break;
 			case 4:
+				for (int i = 0; i < avgs.length - 1; i++) {
+					for (int j = i + 1; j < args.length; i++) {
+						if (avgs[i] < avgs[j]) {
+							// 둘이 자리 바꿈
+							nums[i] = nums[j];
+						}
+					}
+				}
 				System.out.println("성적 출력");
 				break;
 			default:

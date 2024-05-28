@@ -11,7 +11,7 @@ public class S2_class {
 		Scanner sc = new Scanner(System.in); // 주소를 담아라
 
 		for (int i = 0; i < ar.length; i++) {
-			System.out.println(i + 1);
+			System.out.println(i);
 			ar[i] = sc.nextInt();
 		}
 
