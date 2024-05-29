@@ -12,6 +12,7 @@ public class StudentController {
 		Scanner sc = new Scanner(System.in);
 		
 		boolean flag = true;
+		StudentService make = new StudentService();
 		
 		while(flag) {
 			System.out.println("1. 학생 정보 입력 2.전체 정보 출력 3.학생 검색 4. 종료");
@@ -19,8 +20,13 @@ public class StudentController {
 			
 			if(select==1) {
 				System.out.println("학생 정보 입력");
-				StudentService make = new StudentService();
-				make.makeStudent();
+				
+			Student[] students = make.makeStudent();
+			
+			for(int i=0;i<students.length;i++) {
+				
+				System.out.println(students[i].name);
+			}
 				
 			}else if(select==2) {
 				System.out.println("전체 정보 출력");

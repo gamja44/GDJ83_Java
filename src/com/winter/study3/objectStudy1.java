@@ -5,8 +5,9 @@ import com.winter.study3.student.Student;
 public class objectStudy1 {
 
 	public static void main(String[] args) {
-		
-	
+		StudyReturn sr = new StudyReturn();
+		int result = sr.t1();
+		//int result = sr.t2();//보이드 사용해서 리턴값이 없는데 받으려고 해서 에러
 //		
 //		//학생 객체 생성
 //        //new 클래스명 
