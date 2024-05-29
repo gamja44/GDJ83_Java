@@ -2,7 +2,7 @@ package com.winter.study2;
 
 import java.util.Scanner;
 
-public class S2_class {
+public class S2_2 {
 
 	public static void main(String[] args) {
 
