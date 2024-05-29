@@ -21,10 +21,26 @@ public class StudentService {
 		for(int i=0;i<students.length;i++) {
 			
 			
-			students[i] = new Student();  //클래스는 객체부터 만들어야 한다. i에 숫자가 올라갈때마다 객체가 생성한다.
+			//students[i] = new Student();  //클래스는 객체부터 만들어야 한다. i에 숫자가 올라갈때마다 객체가 생성한다.
 			                              //리턴값을 하나 만들기위해서 배열을 나눠서 객체를 하나씩 생성한다.
+			Student s = new Student();
+			System.out.println(i+1+"번째 이름 입력");
+			s.name = sc.next();
+			System.out.println(s.name+"의 번호 입력");
+			s.num = sc.nextInt();
+			System.out.println(s.name+"의 국어 입력");
+			s.kor = sc.nextInt();
+			System.out.println(s.name+"의 영어 입력");
+			s.eng = sc.nextInt();
+			System.out.println(s.name+"의 수학 입력");
+			s.math = sc.nextInt();
+			s.total = s.kor+s.eng+s.math;
+			s.avg = s.total/3;
+			students[i] = s;
+			
+			
+			
 		}
-		
 		
 		return students;
 		
