@@ -7,6 +7,26 @@ public class objectStudy1 {
 	public static void main(String[] args) {
 		StudyReturn sr = new StudyReturn();
 		int result = sr.t1();
+		
+		int sal = 5000000;
+		sr.t4(sal);
+		System.out.println(sal);
+		
+		Test test = new Test();
+		test.level =1;
+		Test test2 = sr.t5(test); //500값을 리턴받고싶고 위에 있던 객체도 쓰고싶으면 다시 변수선언 후 저장
+		System.out.println(test.level);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		//int result = sr.t2();//보이드 사용해서 리턴값이 없는데 받으려고 해서 에러
 //		
 //		//학생 객체 생성

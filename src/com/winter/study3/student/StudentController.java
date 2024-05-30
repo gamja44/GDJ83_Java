@@ -10,6 +10,7 @@ public class StudentController {
 		//1. 학생 정보 입력 2.전체 정보 출력 3.학생 검색 4. 종료
 		
 		Scanner sc = new Scanner(System.in);
+		StudentView studentview = new StudentView();
 		
 		boolean flag = true;
 		StudentService make = new StudentService();
@@ -29,11 +30,13 @@ public class StudentController {
 			
 			}else if(select==2) {
 				System.out.println("전체 정보 출력");
-				for(int i=0;i<students.length;i++) {
-					Student s = students[i];
-					System.out.println(s.name);
-					System.out.println(students[i].name);
-				}
+//				for(int i=0;i<students.length;i++) {
+//					Student s = students[i];
+//					System.out.println(s.name);
+//					System.out.println(students[i].name);
+//				}
+				StudentView.view(students);
+				
 				
 				
 			}else if(select==3) {
