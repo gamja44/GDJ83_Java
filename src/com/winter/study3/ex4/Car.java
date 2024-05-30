@@ -1,4 +1,4 @@
-package com.winter.study3.ex3;
+package com.winter.study3.ex4;
 
 public class Car {
 
