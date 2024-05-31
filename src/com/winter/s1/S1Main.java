@@ -1,18 +1,22 @@
 package com.winter.s1;
 
-import com.winter.s2.Middle;
 
 public class S1Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//이름 번호 국어 영어 수락 총점 평균
-		//역사 과학 의 추가
 		
-		Middle m =new Middle();
+		Object obj = new Object();	
+		Test test = new Test();
+		String str= test.toString();
+		System.out.println(str);
+		System.out.println(test.toString());
 		
-		ms.info();
-
+		System.out.println(String.CASE_INSENSITIVE_ORDER);
+		
+		
+		String n = new String("winter");
+		String name = "winter";
+		System.out.println(name.toString());
+		System.out.println(name);
 	}
-
 }
