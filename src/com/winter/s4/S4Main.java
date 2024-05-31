@@ -17,7 +17,20 @@ public class S4Main {
 		computer.price=300;
 		
 		Phone phone = new Phone();		
+		phone.brand="LG";
+		phone.color="pink";
+		phone.price="150";
 
+		
+		
+		
+		Customer customer = new Customer();
+		customer.don=1000;
+		customer.point=0;
+		
+		customer.buy();
+		
+		
 	}
 
 }

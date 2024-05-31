@@ -25,7 +25,11 @@ public class S3Main {
 	
 	dropShip[0] =tiger;
 		
-		
+	Eagle eagle = new Eagle();
+	Airplain airPlane = new Airplain();
+	
+	Fly fly = eagle;
+	fly =airPlane;
 		
 		
 		

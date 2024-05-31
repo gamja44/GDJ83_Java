@@ -3,6 +3,7 @@ package com.winter.s3;
 public class Tiger extends Animal {
 	
 	int power;
+	String name;
 	
 	//에러뜨니까
 	//미완성 메서드 완성시키는것
