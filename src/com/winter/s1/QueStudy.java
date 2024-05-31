@@ -15,7 +15,7 @@ public class QueStudy {
 	public int[] remove() {
 		//맨뒤의 요소를 삭제하고
 		//배열을 리턴
-		//스택구조를 흉내내려고 하는 코드
+		//선입선출를 흉내내려고 하는 코드
 		
 	}
 	
