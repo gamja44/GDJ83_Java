@@ -36,7 +36,11 @@ public class Java2 {
 		 //스캐너를 이용하여 이름, 주민번호 앞6자리, 전화번호를 키보드에서 입력받고 출력하는 코드
 		 System.out.println("[필수 정보 입력]");
 		 String name2 = scanner.next();
-		 System.out.print("1.이름: "+ name2);
+		 System.out.println("1.이름: "+ name2);
+		 String ssn = scanner.next();
+		 System.out.println("주민번호 앞6자리 :" + ssn);
+		 String num = scanner.next();
+		 System.out.println("전화번호 :" + num);
 		 
 	}
 }
