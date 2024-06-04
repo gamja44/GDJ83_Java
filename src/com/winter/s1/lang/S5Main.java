@@ -17,7 +17,7 @@ public class S5Main {
 		
 		name = "winter-24*서울";
 		name = name.replace("*", "-");
-		String[] datas = name.split("-");
+		String[] datas = name.split("");
 		
 		for(int i=0;i<datas.length;i++) {
 			System.out.println(datas[i]);
