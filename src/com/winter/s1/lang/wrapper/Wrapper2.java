@@ -16,14 +16,27 @@ public class Wrapper2 {
 		
 		String result = "최소 대문자 1개이상 있어야함";
 		
+		int upper=0;
+		int lower=0;
+		int digit=0;
 		for(int i=0;i<pw.length();i++) {
 		Character ch = pw.charAt(i);
 			if(Character.isUpperCase(ch)) {
-				result = "통과";
-				break;
+				upper++;
+			}else if (Character.isLowerCase(ch)) {
+				lower++;
+			}else if(Character.isDigit(ch)) {
+				digit++;
+			}else {
+				
 			}
-				System.out.println(result);
 		}
+		if(upper>0&&lower>0&&digit>0) {
+			System.out.println("통과");			
+		}else {
+			System.out.println("fail");			
+		}
+			
 	}
 
 }

@@ -46,17 +46,39 @@ public class Wrapper3 {
 		//char n1 = jumin.charAt(0);
 		//int num1 = Integer.parseInt(n1 + "");	
 		//System.out.println(num1*2);
-		String ju = jumin.toString();
-		String ju1 = ju.replace("-", "");
-		String[] ju2 = ju1.split("");
 		
-		for(int i=0;i<9;i++) {
-			int result = Integer.parseInt(ju2[i]);
-			int result1 = result*i;
-			System.out.println(result1);
-	
+//		String ju = jumin.toString();
+//		String ju1 = ju.replace("-", "");
+//		String[] ju2 = ju1.split("");
+//		
+		int c=2;
+		int sum = 0;
+		//jumin.replace("-","")
+		for(int i=0;i<jumin.length()-1;i++) {
+			char n1 = jumin.charAt(i);
+			if(n1 == '-') {
+				continue; //즉시 증감식으로 올라가라
 			}
-		
+			String n2 = String.valueOf(n1);
+			int num1 = Integer.parseInt(n2);
+			sum=sum+num1*c;
+			c++;
+			if (c>9) {//계산 전에만 하면 된다
+				c=2;
+			} 
+			sum%=11;
+			sum =11-sum;
+			if(sum>9) {
+				sum=sum%10;
+			}
+			//쓸모없는 변수는 선언하지않아도 되는 장점이 있다.
+			int a = Integer.parseInt(String.valueOf(jumin.charAt(jumin.length()-1)));
+			if(sum==a) {
+				System.out.println("OK");
+			}else {
+				System.out.println("재발급");
+			}
+		}		
 		
 		
 //		for(int i=0;i<6;i++) {

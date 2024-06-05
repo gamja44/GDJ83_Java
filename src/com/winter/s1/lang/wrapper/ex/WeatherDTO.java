@@ -1,5 +1,7 @@
 package com.winter.s1.lang.wrapper.ex;
 
+
+
 public class WeatherDTO {
 	
 	//DTO의 모든 멤버변수는 private 설정
