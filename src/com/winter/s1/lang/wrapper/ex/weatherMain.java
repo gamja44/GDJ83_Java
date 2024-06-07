@@ -1,5 +1,7 @@
 package com.winter.s1.lang.wrapper.ex;
 
+
+
 public class weatherMain {
 
 	public static void main(String[] args) {
@@ -11,5 +13,6 @@ public class weatherMain {
 		WeatherController wc = new WeatherController();
 		wc.start();
 	}
+	
 
 }

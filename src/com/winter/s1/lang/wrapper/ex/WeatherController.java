@@ -45,6 +45,7 @@ public class WeatherController {
 				
 			}else if(select==4) {
 				
+				removeWeather(sc. dtos);
 				System.out.println("날씨정보삭제");
 				
 			}else {

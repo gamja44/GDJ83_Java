@@ -1,6 +1,8 @@
 package com.winter.s1.lang.wrapper.ex;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class WeatherService {
 	
@@ -27,11 +29,44 @@ public class WeatherService {
 		//String info2 = infos1.replace(" ", "");
 		String[] infos = infos1.split("-");
 		
-		WeatherDTO[] dtos= this.getWeathers(infos);
+		WeatherDTO[] dtos= this.useTokenizer(info);
 		
 		return dtos;		
 		
 	}
+	private WeatherDTO[] useTokenizer(String info) {		
+		WeatherDTO[] weatherDTO = new WeatherDTO[4];
+		ArrayList<WeatherDTO> arrays = new ArrayList<WeatherDTO>();
+		
+		StringTokenizer st = new StringTokenizer(info, "-");
+		int idx=0;
+		while(st.hasMoreTokens()) {
+			WeatherDTO weatherDTO1 =new WeatherDTO();
+			
+			String city = st.nextToken().trim();
+			double gion = Double.parseDouble(st.nextToken().trim()); 
+			String status = st.nextToken().trim();
+			int humidity =Integer.parseInt(st.nextToken().trim());
+			
+			weatherDTO1.setSity(city);
+			weatherDTO1.setGion(gion);
+			weatherDTO1.setStatus(status);
+			weatherDTO1.setHumidity(humidity);
+			arrays.add(weatherDTO1);
+			
+			ar[idx] = weatherDTO; 
+			idx++;
+			
+		}
+		
+		return ar;
+	}
+	
+	
+	
+	
+	
+	
 	private WeatherDTO[] getWeathers(String[] infos) {
 		
 	WeatherDTO[] dtos = new WeatherDTO[infos.length/4];
@@ -91,10 +126,25 @@ public class WeatherService {
 				
 			}
 			//removeWeather
-			//기본배열에서 하나를 삭제
+			//기본배열에서 하나를 삭제 앞에 있을 수도 있고 뒤에 있을 수도 있음
 			//도시명을 입력받아서 일치하는 날씨 정보 삭제
-			//continue; 사용해서 건너뛰고 올라가는 것
+			//continue; 사용해서 건너뛰고 올라가는 것 다시 올라간다? for문을 이용
+			//넣는거 따로 찾는것 따로
+			//일단 도시명을 찾아서 입력
+			//remove(int index)        : index 번호의 요소를 삭제
+			//java.util.List 사용해보자
+		public void removeWeather(Scanner sc, WeatherDTO[] ar) {
+			WeatherDTO weatherDTO = new WeatherDTO();
 			
+			
+			WeatherDTO[] newdelet = new WeatherDTO[ar.length-1];
+			for(int i=0;i<ar.length-1;i++) {
+				
+					
+			}
+			
+			
+		}
 			
 			
 			

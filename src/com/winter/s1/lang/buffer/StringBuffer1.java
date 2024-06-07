@@ -12,7 +12,7 @@ public class StringBuffer1 {
 		sb.append("iu");
 		sb.append(10);
 		
-		String result = sb.toString(); //데이터타입이 다르다
+		String result = sb.toString();//데이터타입이 다르다
 		System.out.println(sb);//winteriu10, 내부적으로 object의 toString으로 재정의되어서 나온다
 		System.out.println(result);
 		
