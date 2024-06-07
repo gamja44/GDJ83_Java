@@ -6,13 +6,10 @@ public class weatherMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		WeatherDTO[] dtos = new WeatherService().init();		
-//		WeatherView v = new WeatherView();
-//		v.view(dtos);
-		
+		// DTO (Data Transfer Object)
+		// VO (Value Object)
 		WeatherController wc = new WeatherController();
 		wc.start();
 	}
-	
 
 }
