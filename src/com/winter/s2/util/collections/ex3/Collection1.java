@@ -16,11 +16,4 @@ public class Collection1 {
 		
 		return ar;
 	}
-	
-	public Map<String, Integer> makeMap() {
-		
-	}
-	
-	
-	
 }

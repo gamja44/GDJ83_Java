@@ -6,9 +6,18 @@ public class WeatherDTO {
 	// DTO의 모든 멤버변수는 private 설정
 		// Getters/Setters 필요
 		// 생성자는 여러개 만들어도 상관없지만 기본생성자는 필수
-
+		//학생번호
+		private long num;
 		// 도시명
 		private String city;
+		public long getNum() {
+			return num;
+		}
+
+		public void setNum(long num) {
+			this.num = num;
+		}
+
 		// 기온
 		private double gion;
 		// 날씨정보

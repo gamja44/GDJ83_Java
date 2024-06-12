@@ -22,21 +22,35 @@ public class ReadStudy {
 		BufferedReader br = new BufferedReader(fr);
 		ArrayList<MenuDTO> list = new ArrayList<MenuDTO>();
 		
-		while(true) {
-			String s = br.readLine();	
-		
-			if(s==null) {
+		while (true) {
+			String s = br.readLine();
+
+			if (s == null) {
 				break;
 			}
+
 			MenuDTO menuDTO = new MenuDTO();
-			
-			String[] ar = s.split(",");
-			
-				menuDTO.setMenuName(ar[0].trim());
-				menuDTO.setPrice(Integer.parseInt(ar[1].trim()));
-				menuDTO.setKal(Integer.parseInt(ar[2].trim()));	 
-			
+			// 1. split
+			String[] ar = s.split(","); // 라면 3500 500
+			menuDTO.setMenuName(ar[0].trim());
+			menuDTO.setPrice(Integer.parseInt(ar[1].trim()));
+			menuDTO.setKal(Integer.parseInt(ar[2].trim()));
+
+			// 2. StringTokenizer
+			StringTokenizer st = new StringTokenizer(s, ",");
+			while (st.hasMoreTokens()) {
+				menuDTO.setMenuName(st.nextToken().trim());// 라면
+				menuDTO.setPrice(Integer.parseInt(st.nextToken().trim()));// 3500
+				menuDTO.setKal(Integer.parseInt(st.nextToken().trim()));// 500
 			}
-			return List<MenuDTO>;
+
+			list.add(menuDTO);
+			System.out.println(s);
+		}
+
+		br.close();
+		fr.close();
+
+		return list;
 	}
 }
