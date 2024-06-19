@@ -14,9 +14,9 @@ public class FileReadMain {
 		File file = new File("C:\\study","study.java");
 		Scanner scanner = new Scanner(System.in);
 		
-		scanner.close();
 		FileReader fr = null;
 		BufferedReader br = null;
+		
 		try {
 			fr = new FileReader(file);
 			br = new BufferedReader(fr);
@@ -25,10 +25,9 @@ public class FileReadMain {
 				String s = br.readLine();
 				if(s==null) {
 					break;
-				}
-				System.out.println(s);
-			}	
-						
+				}	
+			}
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
